@@ -1,0 +1,30 @@
+.aboutUs-continer {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aboutUs-title h2 {
+    padding-bottom: 2em;
+    color: rgb(210 89 161);
+    text-align: center;
+}
+
+.aboutUs-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5em;
+}
+
+.aboutUs-image img {
+    height: 30em;
+    width: 30em;
+    border-radius: 0.9em;
+}
+.aboutUs-text p {
+    font-size: 1.5em;
+    height: 20em;
+    width: 30em;
+    color: rgb(210 89 161);
+}

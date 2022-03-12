@@ -1,0 +1,138 @@
+.Home {
+    background-image: url(../img/modelpic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 45em;
+    font-family: "Numans", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-gap: 15em;
+    /* justify-content: flex-end; */
+    padding-top: 6em;
+    padding-left: 2em;
+    height: 100%;
+    align-content: center;
+}
+
+.cardlogin {
+    height: 328px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgb(230 188 214) !important;
+    border-radius: 55px;
+}
+
+.social_icon span {
+    border-radius: 26% 74% 27% 73% / 0% 100% 0% 100%;
+    font-size: 60px;
+    margin-left: 10px;
+    color: #d259a1;
+}
+
+.social_icon span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.card-header h3 {
+    color: #d259a1 !important;
+}
+
+.social_icon {
+    position: absolute;
+    right: 20px;
+    top: -45px;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    background-color: rgb(210 89 161);
+    color: white;
+    border: 0 !important;
+    border-radius: 26% 74% 27% 73% / 0% 100% 0% 100%;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+    color: rgb(210 89 161);
+}
+
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn {
+    color: white !important;
+    background-color: rgb(210 89 161);
+    width: 100px;
+    border-radius: 26% 74% 27% 73% / 0% 100% 0% 100%;
+}
+
+.login_btn:hover {
+    color: black;
+    background-color: white;
+}
+
+.links {
+    color: white;
+}
+
+.links a {
+    margin-left: 4px;
+    color: rgb(210 89 161);
+}
+@media only screen and (max-width: 900px) {
+    .Home {
+        height: 60em;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .card {
+        width: 100%;
+        margin-right: 1em;
+    }
+    .social_icon {
+        right: 8px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .card {
+        width: 100%;
+        height: auto;
+        margin-right: 1em;
+    }
+    .fab:before {
+        font-size: 0.7em;
+    }
+
+    .card-header h3 {
+        margin-top: 1em;
+    }
+    .remember,
+    .remember input {
+        padding-bottom: 1em;
+    }
+    .input-group > .form-control:not(:first-child) {
+        font-size: 0.8em;
+    }
+    .links {
+        font-size: 1em;
+    }
+    .links a {
+        font-size: 0.8em;
+        margin-top: 0.5em;
+    }
+}

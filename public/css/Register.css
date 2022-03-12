@@ -1,0 +1,77 @@
+.Register {
+    background-image: url(../img/modelpic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 45em;
+    font-family: "Numans", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 6em;
+    padding-left: 2em;
+    height: 100%;
+    align-content: center;
+}
+
+.card2 {
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgb(230 188 214) !important;
+    border-radius: 55px;
+}
+
+.card-header {
+    font-size: 1.75rem;
+    color: #d259a1 !important;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    background-color: rgb(210 89 161);
+    color: white;
+    border: 0 !important;
+    border-radius: 26% 74% 27% 73% / 0% 100% 0% 100%;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.login_btn {
+    color: black;
+    background-color: rgb(210 89 161);
+    width: 100px;
+    border-radius: 26% 74% 27% 73% / 0% 100% 0% 100%;
+}
+
+.login_btn:hover {
+    color: black;
+    background-color: white;
+}
+
+.links {
+    color: white;
+}
+
+.links a {
+    margin-left: 20px;
+    color: rgb(210 89 161);
+}
+.fas,
+.far {
+    margin-left: 1em;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 425px) {
+    .card2 {
+        width: 20em;
+        padding-left: 2em;
+        margin-left: 2em;
+    }
+}

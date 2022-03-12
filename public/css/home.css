@@ -1,0 +1,136 @@
+.services {
+    text-align: center;
+    color: rgb(210 89 161);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+.services-container {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 3em;
+    margin-bottom: 3em;
+}
+.services-container img {
+    height: 15em;
+    border-radius: 5em;
+}
+.services-container p {
+    height: 9em;
+}
+
+#card_btn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(210 89 161);
+
+    border-radius: 1em;
+    border-color: palevioletred;
+}
+#slider-btn {
+    color: black;
+    background-color: rgb(210 89 161) !important;
+    border-radius: 1em;
+
+    border-color: palevioletred;
+}
+#price_table {
+    text-align: center;
+    margin-top: 2em;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    color: rgb(210 89 161);
+    align-items: center !important;
+    /* width: 50%; */
+
+    border-color: rgb(210 89 161);
+}
+
+#table {
+    justify-content: center;
+    width: 60%;
+    margin-top: 2em;
+    color: rgb(210 89 161);
+    border-collapse: collapse;
+    border-radius: 30px;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0.3em 0.3em 0.3em 0.9em rgb(210 89 161); /* this draws the table border  */
+}
+
+/* <!-- Testimonial Start --> */
+.home-testimonial {
+    margin-top: 2em;
+    background-color: rgb(210 89 161);
+    height: 380px;
+}
+
+.home-testimonial-bottom {
+    background-color: #f8f8f8;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    height: 130px;
+    top: 190px;
+}
+
+.home-testimonial h3 {
+    margin: 2em;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.home-testimonial h2 {
+    margin-bottom: 2em;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.testimonial-inner {
+    position: relative;
+    top: -174px;
+}
+
+.testimonial-pos {
+    position: relative;
+    top: 24px;
+}
+
+.testimonial-inner .tour-desc {
+    border-radius: 5px;
+    padding: 40px;
+}
+
+.color-grey-3 {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 14px;
+    color: #6c83a2;
+}
+
+.testimonial-inner img.tm-people {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: none;
+}
+
+.link-name {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 14px;
+    color: #6c83a2;
+}
+
+.link-position {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 12px;
+    color: #6c83a2;
+}
