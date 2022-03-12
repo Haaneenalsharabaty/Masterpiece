@@ -26,7 +26,7 @@ class CategorySeeder extends Seeder
 
             ],
             [
-                'category_name' => 'skin care service',
+                'category_name' => 'bridal',
 
 
             ],

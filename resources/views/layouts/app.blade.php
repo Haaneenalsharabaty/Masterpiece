@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link href="{{ asset('img/logo2.png') }}"  rel="icon">
-
+<script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -38,6 +38,12 @@
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user-profile.css') }}" rel="stylesheet">
 </head>
+<style>
+    .dropdown-menu{
+        left: 85% !important;
+        right: 0 !important;
+    }
+    </style>
 <body>
     <div id="app">
         <div style=" background-color:white !important;   height: 4em;  " class="navbar navbar-expand-lg bg-light navbar-light">
@@ -50,7 +56,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div style="background-color: rgb(251, 241, 251);
+                z-index: 99;
+                text-align: center;" class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
                         <a style="color: rgb(210 89 161) !important;"  href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                         <a style="color: rgb(210 89 161) !important;" href="{{ url('/aboutUs') }}" class="nav-item nav-link">About</a>
@@ -192,14 +200,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    {{-- <script src="js/main.js"></script> --}}
-    {{-- <script src="{{asset('lib/easing/easing.min.js')}}"></script>
+    <script src="js/main.js"></script>
+     <script src="{{asset('lib/easing/easing.min.js')}}"></script>
     <script src="{{asset('lib/owlcarousel/owl.carousel.min.js')}}"></script>
     <script src="{{asset('lib/tempusdominus/js/moment.min.js')}}"></script>
     <script src="{{asset('lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
     <script src="{{asset('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Template Javascript -->
     <!-- Template Javascript -->
 

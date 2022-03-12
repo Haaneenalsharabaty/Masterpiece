@@ -3,7 +3,7 @@
 
 @section('content')
  <!-- Carousel Start -->
-  <div class="container-fluid p-0 mb-5 pb-5">
+  <div style="width: 30em" class="container-fluid p-0 mb-5 pb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
@@ -11,6 +11,12 @@
                 <li data-target="#header-carousel" data-slide-to="2"></li>
                 <li data-target="#header-carousel" data-slide-to="3"></li>
                 <li data-target="#header-carousel" data-slide-to="4"></li>
+                <li data-target="#header-carousel" data-slide-to="5" ></li>
+                <li data-target="#header-carousel" data-slide-to="6"></li>
+                <li data-target="#header-carousel" data-slide-to="7"></li>
+                <li data-target="#header-carousel" data-slide-to="8"></li>
+                <li data-target="#header-carousel" data-slide-to="9"></li>
+             
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item position-relative active" style="min-height: 100vh;">
@@ -76,6 +82,50 @@
                 </div>
                 <div class="carousel-item position-relative" style="min-height: 100vh;">
                     <img  class="position-absolute w-100 h-100" src='{{ asset('img/h6.PNG') }}' style="object-fit: cover;">
+                    {{-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
+                            <h3 class="display-3 text-capitalize text-white mb-3">collection of trend-led hairstyles</h3>
+                            <p class="mx-md-5 px-5">Ready to head out to the salon for a restyle? Let our wide ranging collection of trend-led hairstyles and colours inspire you.</p>
+                            <a  id="slider-btn" class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a>
+                        </div>
+                    </div> --}}
+                </div>
+                <div class="carousel-item position-relative" style="min-height: 100vh;">
+                    <img  class="position-absolute w-100 h-100" src='{{ asset('img/h7.PNG') }}' style="object-fit: cover;">
+                    {{-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
+                            <h3 class="display-3 text-capitalize text-white mb-3">collection of trend-led hairstyles</h3>
+                            <p class="mx-md-5 px-5">Ready to head out to the salon for a restyle? Let our wide ranging collection of trend-led hairstyles and colours inspire you.</p>
+                            <a  id="slider-btn" class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a>
+                        </div>
+                    </div> --}}
+                </div>
+                <div class="carousel-item position-relative" style="min-height: 100vh;">
+                    <img  class="position-absolute w-100 h-100" src='{{ asset('img/h8.PNG') }}' style="object-fit: cover;">
+                    {{-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
+                            <h3 class="display-3 text-capitalize text-white mb-3">collection of trend-led hairstyles</h3>
+                            <p class="mx-md-5 px-5">Ready to head out to the salon for a restyle? Let our wide ranging collection of trend-led hairstyles and colours inspire you.</p>
+                            <a  id="slider-btn" class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a>
+                        </div>
+                    </div> --}}
+                </div>
+                <div class="carousel-item position-relative" style="min-height: 100vh;">
+                    <img  class="position-absolute w-100 h-100" src='{{ asset('img/h9.PNG') }}' style="object-fit: cover;">
+                    {{-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
+                            <h3 class="display-3 text-capitalize text-white mb-3">collection of trend-led hairstyles</h3>
+                            <p class="mx-md-5 px-5">Ready to head out to the salon for a restyle? Let our wide ranging collection of trend-led hairstyles and colours inspire you.</p>
+                            <a  id="slider-btn" class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a>
+                        </div>
+                    </div> --}}
+                </div>
+                <div class="carousel-item position-relative" style="min-height: 100vh;">
+                    <img  class="position-absolute w-100 h-100" src='{{ asset('img/h10.PNG') }}' style="object-fit: cover;">
                     {{-- <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>

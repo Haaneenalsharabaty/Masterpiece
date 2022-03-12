@@ -57,7 +57,7 @@
 <section class="services">
     <h2> Our Sections</h2>
     <div class="services-container">
-      <div class="card home" style="width: 18rem;border-radius: 5em;">
+      <div class="card home" style="border-radius: 5em;">
         <img class="card-img-top" src={{ asset('img/nails.jpg') }} alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Nails section</h5>
@@ -65,7 +65,7 @@
           <a href="{{ url('/gallery') }}" id="card_btn" class="btn btn-primary">Show all </a>
         </div>
       </div>
-      <div class="card home" style="width: 18rem;border-radius: 5em;">
+      <div class="card home" style="border-radius: 5em;">
         <img class="card-img-top" src={{ asset('img/stylist-cutting-hair.jpg') }} alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Hair section</h5>
@@ -73,20 +73,20 @@
           <a href="{{ url('/hair-gallery') }}" id="card_btn" class="btn btn-primary">Show all </a>
         </div>
       </div>
-      <div class="card home" style="width: 18rem;border-radius: 5em;">
+      <div class="card home" style="border-radius: 5em;">
         <img class="card-img-top" src={{ asset('img/141736725_763844297864216_5928760459472082522_n.jpg') }} alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Bridal section</h5>
           <p class="card-text">Ready to head out to the salon for a restyle? Let our wide ranging collection of trend-led hairstyles and colours inspire you.</p>
-          <a href="#" id="card_btn" class="btn btn-primary">Show all</a>
+          <a href="{{ url('/bridal-gallery') }}" id="card_btn" class="btn btn-primary">Show all</a>
         </div>
       </div>
-      <div class="card home" style="width: 18rem; border-radius: 5em;">
+      <div class="card home" style=" border-radius: 5em;">
         <img class="card-img-top" src={{ asset('img/service-1.jpg') }} alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">face and body section</h5>
           <p class="card-text">Ready to head out to the salon for a restyle? Let our wide ranging collection of trend-led hairstyles and colours inspire you.</p>
-         <a href="#" id="card_btn" class="btn btn-primary">Show all </a>
+         <a href="{{ url('/face-gallery') }}" id="card_btn" class="btn btn-primary">Show all </a>
         </div>
       </div>
     </div>

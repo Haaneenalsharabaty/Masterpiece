@@ -47,6 +47,26 @@ class IndexController extends Controller
 
         return view('layouts.gallery.hair',compact('services'));
     }
+    public function bridal()
+    {
+
+      $services= DB::table('services')->where('category_id', '3')->get();
+
+        // dd($services);
+
+
+        return view('layouts.gallery.bridal',compact('services'));
+    }
+    public function face()
+    {
+
+      $services= DB::table('services')->where('category_id', '4')->get();
+
+
+
+
+        return view('layouts.gallery.face',compact('services'));
+    }
 
     /**
      * Store a newly created resource in storage.
