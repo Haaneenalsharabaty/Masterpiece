@@ -37,6 +37,7 @@
     <link href="{{ asset('css/aboutUs.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user-profile.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/book.css') }}" rel="stylesheet">
 </head>
 <style>
     .dropdown-menu{
@@ -195,6 +196,7 @@
     <!-- JavaScript Libraries -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/home.js') }}" defer></script>
+    <script src="{{ asset('js/book.js') }}" defer></script>
     <script src="{{ asset('js/testimonial.js') }}" defer></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

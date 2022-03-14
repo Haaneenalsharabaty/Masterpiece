@@ -28,6 +28,8 @@ Route::get('/', function () {
     return view('layouts.index');
 });
 ;
+Route::get('/book', [App\Http\Controllers\Service_UserController::class, 'index']);
+Route::post('/book', [App\Http\Controllers\Service_UserController::class, 'store'])->name('book.store');
 Route::get('/gallery', [App\Http\Controllers\IndexController::class, 'nails']);
 Route::get('/hair-gallery', [App\Http\Controllers\IndexController::class, 'hair']);
 Route::get('/bridal-gallery', [App\Http\Controllers\IndexController::class, 'bridal']);
