@@ -51,7 +51,7 @@ class Service_UserController extends Controller
                     $time = $reservations['pivot']->time;
                     $service_id = $reservations['pivot']->service_id;
 
-                    if ($request->date == $date && $request->time == $time && $request->number == $table_id) {
+                    if ($request->date == $date && $request->time == $time && $request->service_name == $service_id) {
                         // $error=true;
                         $request->flash();
                         session()->flash('success', 'this Reservation

@@ -3,7 +3,7 @@
         <!-- Page Header Start -->
         <div class="page-header">
             <div class="container-contact">
-                <div class="row">
+                <div  id="container-contact">
 
                     <div  id="shourtcut" class="col-12">
                         <a href="{{ url('/') }}">Home/</a>

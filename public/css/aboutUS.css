@@ -23,8 +23,55 @@
     border-radius: 0.9em;
 }
 .aboutUs-text p {
+    text-align: center;
     font-size: 1.5em;
     height: 20em;
     width: 30em;
     color: rgb(210 89 161);
+}
+@media only screen and (max-width: 1400px) {
+    .aboutUs-content {
+        grid-template-columns: auto;
+    }
+    .aboutUs-image img {
+        margin-left: 1em;
+        height: 34em;
+        width: 34em;
+    }
+    .aboutUs-text p {
+        height: 20em;
+        width: 24em;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .aboutUs-text p {
+        width: 34em;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 566px) {
+    .aboutUs-image img {
+        width: 23em;
+    }
+    .aboutUs-text p {
+        width: 30em;
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .aboutUs-image img {
+        width: 15em;
+        margin-left: 3.5em;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .aboutUs-image img {
+        width: 15em;
+        margin-left: 0.5em;
+    }
+    .aboutUs-text p {
+        width: 26em !important;
+        font-size: 0.6em;
+    }
 }

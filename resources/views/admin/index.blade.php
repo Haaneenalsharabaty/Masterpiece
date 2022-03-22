@@ -45,10 +45,88 @@
         </div>
     </div>
     <!-- Sale & Revenue End -->
+    <div class="container-fluid pt-4 px-4">
+
+        <div class="bg-light text-center rounded p-4">
+            <div class="table-responsive">
+                <table class="table text-start align-middle table-bordered table-hover mb-0">
+                    <thead>
+                        <tr class="text-dark">
+                            {{-- <th scope="col"><input class="form-check-input" type="checkbox"></th> --}}
+                            {{-- <th></th> --}}
+                            <th scope="col">User Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">service Name</th>
+                            <th scope="col">Mobile Number</th>
+
+                            <th scope="col">Date</th>
+                            <th scope="col">time</th>
+                            <th scope="col">status</th>
+                            <th scope="col">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($users as $user)
+                            @foreach ($user->services as $oneservice )
+                                <tr>
+                                    <td>{{$user->name}}</td>
+                                    <td>
+                                        <a href="mailto:{{$user->email}}">{{$user->email}}</a>
+                                    </td>
+                                    {{-- <td>{{$oneservice->pivot->oneservice_id}}</td> --}}
+
+                                    <td>{{$oneservice->Service_name}}</td>
+
+                                    <td>{{$oneservice->pivot->mobile_number}}</td>
+
+                                    <td>{{$oneservice->pivot->date}}</td>
+                                    <td>{{$oneservice->pivot->time}}</td>
+                                    <td>
+
+                                        <form action="{{URL::to('/admin/dashboard/' . $oneservice->pivot->user_id . '/update/' . $oneservice->pivot->id)}}" method="post">
+                                            @csrf
+                                            @method('put')
+                                            <select class="form-select" name="status" onchange="this.form.submit()">
+                                                <option value="{{$oneservice->pivot->status}}">{{$oneservice->pivot->status}}</option>
+
+                                                @foreach ($allStatus as $status)
+                                                    @if ($status == $oneservice->pivot->status )
+                                                        @php
+                                                            continue
+                                                        @endphp
+                                                    @endif
+                                                <option value="{{$status}}">{{$status}}</option>
+                                                @endforeach
+
+                                            </select>
+
+                                            <input type="hidden" name="user_id" value="{{$oneservice->pivot->user_id}}">
+                                            <input type="hidden" name="service_id" value="{{$oneservice->pivot->service_id}}">
+                                            <input type="hidden" name="mobile_number" value="{{$oneservice->pivot->mobile_number}}">
+
+                                            <input type="hidden" name="date" value="{{$oneservice->pivot->date}}">
+                                            <input type="hidden" name="time" value="{{$oneservice->pivot->time}}">
+                                            <input type="hidden" name="note" value="{{$oneservice->pivot->note}}">
+
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <textarea class="form-control" id="exampleFormControlTextarea3" rows="3" readonly>{{$oneservice->pivot->note}}</textarea>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Recent Sales End -->
+
 
 
     <!-- Sales Chart Start -->
-    <div class="container-fluid pt-4 px-4">
+    {{-- <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
             <div class="col-sm-12 col-xl-6">
                 <div class="bg-light text-center rounded p-4">
@@ -69,7 +147,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Sales Chart End -->
 
 

@@ -29,10 +29,9 @@ class IndexController extends Controller
      */
     public function nails()
     {
-        // Service::find()->where('category_id'==2);
+
       $services= DB::table('services')->where('category_id', '2')->get();
 
-        // dd($services);
 
 
         return view('layouts.gallery.nails',compact('services'));
@@ -42,7 +41,7 @@ class IndexController extends Controller
 
       $services= DB::table('services')->where('category_id', '1')->get();
 
-        // dd($services);
+
 
 
         return view('layouts.gallery.hair',compact('services'));
@@ -52,8 +51,7 @@ class IndexController extends Controller
 
       $services= DB::table('services')->where('category_id', '3')->get();
 
-        // dd($services);
-
+    
 
         return view('layouts.gallery.bridal',compact('services'));
     }

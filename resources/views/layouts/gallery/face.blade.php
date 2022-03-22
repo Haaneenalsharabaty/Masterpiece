@@ -3,14 +3,14 @@
 
 @section('content')
  <!-- Carousel Start -->
-  <div  style="width: 50em" class="container-fluid p-0 mb-5 pb-5">
+  <div id="slider" class="container-fluid p-0 mb-5 pb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#header-carousel" data-slide-to="1"></li>
                 <li data-target="#header-carousel" data-slide-to="2"></li>
                 <li data-target="#header-carousel" data-slide-to="3"></li>
-                
+
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item position-relative active" style="min-height: 100vh;">

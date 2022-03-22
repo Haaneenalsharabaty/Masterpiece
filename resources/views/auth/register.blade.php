@@ -77,7 +77,7 @@
 
 <section  class="Register" id="Register">
 
-    <div class="container">
+    <div class="container"  id="Register-container">
 <div class="d-flex justify-content-center h-100">
 <div class="card2">
     <div class="card-header">Register</div>
@@ -110,20 +110,7 @@
               @enderror
 
                           </div>
-                          {{-- <div class="input-group form-group">
-              <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
-              </div>
-                              <input type="date" class="form-control" placeholder="Date of birth" />
 
-                          </div> --}}
-                          {{-- <div class="input-group form-group">
-              <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
-              </div>
-                              <input type="number" class="form-control" placeholder="You Phone Number" />
-
-                          </div> --}}
 
           <div class="input-group form-group">
               <div class="input-group-prepend">
@@ -164,8 +151,5 @@
 </div>
 </div>
 </div>
-      {{-- {/* <div className="Introimage">
 
-          <img src="modelpic.jpg" alt="my pic" />
-      </div> */} --}}
   </section>@endsection

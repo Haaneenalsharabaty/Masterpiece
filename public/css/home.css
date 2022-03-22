@@ -141,6 +141,19 @@
         grid-template-columns: auto auto;
     }
 }
+@media only screen and (max-width: 777px) {
+    .testimonial-inner {
+        position: relative;
+        top: -17px;
+    }
+    .home-testimonial-bottom {
+        /* margin-top: 20px; */
+
+        position: relative;
+
+        top: 96px;
+    }
+}
 @media only screen and (max-width: 651px) {
     .services-container {
         /* grid-template-rows: auto auto auto auto !important; */

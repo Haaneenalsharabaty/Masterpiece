@@ -139,7 +139,7 @@
           <!-- prices end -->
            <!-- Testimonial Start -->
 
-           <section class="home-testimonial">
+           <section class="home-testimonial" id="testimonial">
             <div class="container-fluid">
                 <div class="row d-flex justify-content-center testimonial-pos">
 

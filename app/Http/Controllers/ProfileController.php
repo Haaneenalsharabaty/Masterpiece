@@ -17,7 +17,7 @@ public function profile()
     $service=Service::all();
      $user_id=Auth::user()->id;
      $user=User::find($user_id);
-    // dd($user);
+
     return view('layouts.users.user-profile',compact('user','service'));
 }
 
@@ -25,9 +25,15 @@ public function profile()
 
     public function update(Request $request)
     {
+        $request->validate([
+            'name' => 'required|min:2',
+            'password' => 'min:8',
+            'mobile_number' => 'max:10',
+        ]);
     $user_id=Auth::user();
-    // $user=User::findOrFail($user_id);
+
     $user_id->name=$request->input('name');
+    $user_id->mobile_number=$request->input('mobile_number');
     // $user_id->password=$request->input('password');
     // $user_id->tables->pivot->mobile_number=$request->input('mobile_number');
     // $user_id->password=$request->user()->fill([

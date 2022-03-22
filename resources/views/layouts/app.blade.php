@@ -38,6 +38,7 @@
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user-profile.css') }}" rel="stylesheet">
     <link href="{{ asset('css/book.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/gallery.css') }}" rel="stylesheet">
 </head>
 <style>
     .dropdown-menu{
@@ -50,8 +51,8 @@
         <div style=" background-color:white !important;   height: 4em;  " class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
                 <div class="logoimage">
-                    <img style=" padding-left: 1em;
-                    width: 50%;" class="logoimg" src={{ asset('img/logo2.png')}} alt=" website_logo" />
+                    <a href="{{ url('/') }}"><img style=" padding-left: 1em;
+                    width: 50%;" class="logoimg" src={{ asset('img/logo2.png')}} alt=" website_logo" /></a>
                   </div>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>

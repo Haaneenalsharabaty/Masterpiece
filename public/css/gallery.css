@@ -1,0 +1,13 @@
+#slider {
+    width: 50em;
+
+    margin-top: 3em;
+}
+
+@media only screen and (max-width: 917px) {
+    #slider {
+        width: 14em;
+        height: -63%;
+        margin-top: 3em;
+    }
+}

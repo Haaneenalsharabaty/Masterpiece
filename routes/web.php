@@ -45,6 +45,9 @@ Auth::routes();
 // Route::middleware(['auth','IsAdmin'])->group(function () {
 
 Route::get('admin/index', [IndexController::class, 'index']);
+Route::get('/admin/dashboard', [IndexController::class, 'index'])->name('admin.index');
+
+ Route::put('/admin/dashboard/{userId}/update/{pivotId}', [IndexController::class, 'update'])->name('index.update');
 // Route::get('/', [IndexController::class, 'admin']);
 Route::get('users', [UserController::class, 'index']);
 Route::get('editUser/{id}', [UserController::class, 'edit']);
