@@ -18,10 +18,10 @@ class ServiceController  extends Controller
      */
     public function index()
     {
-        $adminName=User::where('role','=','admin')->get();
+        $adminName = User::where('role', '=', 'admin')->get();
 
-        $services=Service::all();
-        return view('admin.servicess.index',compact('services','adminName'));
+        $services = Service::all();
+        return view('admin.servicess.index', compact('services', 'adminName'));
     }
 
     /**
@@ -30,8 +30,10 @@ class ServiceController  extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {$categories=Category::all();
-        return view('admin.servicess.create',compact('categories'));
+    {
+        $adminName = User::where('role', '=', 'admin')->get();
+        $categories = Category::all();
+        return view('admin.servicess.create', compact('categories', 'adminName'));
     }
 
     /**
@@ -50,14 +52,14 @@ class ServiceController  extends Controller
 
         Service::create([
             'service_name' => $request->service_name,
-            'price'=>$request->price,
-            'category_id'=>$request->category_id,
+            'price' => $request->price,
+            'category_id' => $request->category_id,
 
         ]);
         // ->categories()->attach([$request->category_id]);
         $request->flash();
         session()->flash('success', 'Your services added successfully.');
-    return redirect('servicess');
+        return redirect('servicess');
     }
 
     /**
@@ -79,11 +81,12 @@ class ServiceController  extends Controller
      */
     public function edit($id)
     {
-        $categories=Category::all();
+        $adminName = User::where('role', '=', 'admin')->get();
+        $categories = Category::all();
 
-        $service=Service::findOrFail($id);
-// dd($service);
-        return view('admin.Servicess.edit',compact('service','categories'));
+        $service = Service::findOrFail($id);
+        // dd($service);
+        return view('admin.Servicess.edit', compact('service', 'categories', 'adminName'));
     }
 
     /**
@@ -95,11 +98,11 @@ class ServiceController  extends Controller
      */
     public function update(Request $request, $id)
     {
-        $services=Service::findOrFail($id);
+        $services = Service::findOrFail($id);
 
-        $services->service_name=$request->input('service_name');
-        $services->price=$request->input('price');
-        $services->category_id=$request->input('category_id');
+        $services->service_name = $request->input('service_name');
+        $services->price = $request->input('price');
+        $services->category_id = $request->input('category_id');
 
 
         $services->update();
@@ -107,9 +110,9 @@ class ServiceController  extends Controller
 
 
 
-    $request->flash();
-    session()->flash('success', 'Your service updated successfully.');
-return redirect('servicess');
+        $request->flash();
+        session()->flash('success', 'Your service updated successfully.');
+        return redirect('servicess');
     }
 
     /**
@@ -118,12 +121,12 @@ return redirect('servicess');
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,$id)
+    public function destroy(Request $request, $id)
     {
         $service = Service::find($id);
         $service->delete();
         $request->flash();
         session()->flash('success', 'Your Service delete successfully.');
-    return redirect('servicess');
+        return redirect('servicess');
     }
 }

@@ -16,12 +16,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $adminName=User::where('role','=','admin')->get();
-        $categories=Category::all();
-        return view('admin.categories.index',compact('categories','adminName'));
-
-
-
+        $adminName = User::where('role', '=', 'admin')->get();
+        $categories = Category::all();
+        return view('admin.categories.index', compact('categories', 'adminName'));
     }
 
     /**
@@ -30,7 +27,9 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    { return view('admin.categories.create');
+    {
+        $adminName = User::where('role', '=', 'admin')->get();
+        return view('admin.categories.create', compact('adminName'));
     }
 
     /**
@@ -47,15 +46,15 @@ class CategoryController extends Controller
         ]);
 
 
-$category=new Category();
-$category->category_name=$request->input('category_name');
-$category->save();
+        $category = new Category();
+        $category->category_name = $request->input('category_name');
+        $category->save();
 
 
 
         $request->flash();
         session()->flash('success', 'Your category added successfully.');
-    return redirect('categories');
+        return redirect('categories');
     }
 
     /**
@@ -77,8 +76,9 @@ $category->save();
      */
     public function edit($id)
     {
-     $category=Category::find($id);
-     return view('admin.categories.edit',compact('category'));
+        $adminName = User::where('role', '=', 'admin')->get();
+        $category = Category::find($id);
+        return view('admin.categories.edit', compact('category', 'adminName'));
     }
 
     /**
@@ -91,24 +91,23 @@ $category->save();
     public function update(Request $request, $id)
     {
 
-    // $category = Category::find($id);
-    // $category->update([
-    //     'category_name' => $request->category_name,
+        // $category = Category::find($id);
+        // $category->update([
+        //     'category_name' => $request->category_name,
 
-    // ]);
-    $category=Category::findOrFail($id);
-        $category->category_name=$request->input('category_name');
+        // ]);
+        $category = Category::findOrFail($id);
+        $category->category_name = $request->input('category_name');
 
         $category->update();
 
 
 
 
-    $request->flash();
-    session()->flash('success', 'Your category updated successfully.');
-return redirect('categories');
-
-}
+        $request->flash();
+        session()->flash('success', 'Your category updated successfully.');
+        return redirect('categories');
+    }
 
 
     /**
@@ -117,12 +116,12 @@ return redirect('categories');
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,$id)
+    public function destroy(Request $request, $id)
     {
         $category = Category::find($id);
         $category->delete();
         $request->flash();
         session()->flash('success', 'Your category delete successfully.');
-    return redirect('categories');
+        return redirect('categories');
     }
 }

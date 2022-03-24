@@ -16,10 +16,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $adminName=User::where('role','=','admin')->get();
+        $adminName = User::where('role', '=', 'admin')->get();
         $users = User::all();
 
-        return view('admin.users.index', compact('users','adminName'));
+        return view('admin.users.index', compact('users', 'adminName'));
     }
 
     /**
@@ -28,8 +28,10 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
+
     {
-        return view('admin.users.create');
+        $adminName = User::where('role', '=', 'admin')->get();
+        return view('admin.users.create', compact('adminName'));
     }
 
     /**
@@ -54,12 +56,12 @@ class UserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => $password,
-            'role'=>$request->role,
+            'role' => $request->role,
             'mobile_number' => $request->mobile_number
         ]);
         $request->flash();
         session()->flash('success', 'Your user added successfully.');
-    return redirect('users');
+        return redirect('users');
     }
 
     /**
@@ -81,11 +83,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-
+        $adminName = User::where('role', '=', 'admin')->get();
         $user = User::find($id);
 
 
-            return view('admin.users.edit',compact('user'));
+        return view('admin.users.edit', compact('user', 'adminName'));
     }
 
     /**
@@ -108,14 +110,14 @@ class UserController extends Controller
             $user = User::find($id);
             $user->update([
                 'name' => $request->name,
-               'email' => $request->email,
+                'email' => $request->email,
                 'password' => $password,
                 'mobile_number' => $request->mobile_number,
-                'role'=>$request->role
+                'role' => $request->role
             ]);
             $request->flash();
             session()->flash('success', 'Your user updated successfully.');
-        return redirect('users');
+            return redirect('users');
         }
 
         $request->validate([
@@ -127,12 +129,11 @@ class UserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'mobile_number' => $request->mobile_number,
-            'role'=>$request->role
+            'role' => $request->role
         ]);
         $request->flash();
         session()->flash('success', 'Your user updated successfully.');
-    return redirect('users');
-
+        return redirect('users');
     }
 
 
@@ -143,14 +144,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id,Request $request)
+    public function destroy($id, Request $request)
     {
         $user = User::find($id);
         $user->delete();
         $request->flash();
         session()->flash('success', 'Your user delete successfully.');
-    return redirect('users');
-
-
+        return redirect('users');
     }
 }

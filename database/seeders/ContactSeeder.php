@@ -17,16 +17,16 @@ class ContactSeeder extends Seeder
     {
         DB::table('contacts')->insert([
             [
-                'contact_name' => 'Mahdi',
-                'contact_email' => 'mahdi@gmail.com',
-                'subject' => 'about menu',
-                'message' => 'hello can i ask about if you have special menu for people with allergies '
+                'contact_name' => 'salma',
+                'contact_email' => 'salma@gmail.com',
+                'subject' => 'about packages',
+                'message' => 'hello can i ask about if you have special package '
             ],
             [
                 'contact_name' => 'Farah',
                 'contact_email' => 'farahi@gmail.com',
-                'subject' => 'about table',
-                'message' => 'Do you hava outside tables'
+                'subject' => 'about branch',
+                'message' => 'Do you hava another bransh'
             ],
             [
                 'contact_name' => 'Haneen',
