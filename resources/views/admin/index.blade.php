@@ -75,7 +75,20 @@
                                     </td>
                                     {{-- <td>{{$oneservice->pivot->oneservice_id}}</td> --}}
 
-                                    <td>{{$oneservice->Service_name}}</td>
+                                    <td>
+                                    @foreach ($allService as $service )
+                                        @if ($service->id===$oneservice->pivot->service_id)
+{{ $service->service_name }}
+                                        @endif
+                                    @endforeach
+
+
+
+
+
+
+
+                                    </td>
 
                                     <td>{{$oneservice->pivot->mobile_number}}</td>
 

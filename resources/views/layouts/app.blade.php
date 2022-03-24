@@ -58,7 +58,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div style="background-color: rgb(251, 241, 251);
+                <div style="background-color:white;
                 z-index: 99;
                 text-align: center;" class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">

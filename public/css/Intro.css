@@ -6,7 +6,7 @@
     font-family: "Numans", sans-serif;
 }
 
-.container {
+#login {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -100,7 +100,11 @@ input:focus {
 }
 
 @media only screen and (max-width: 426px) {
-    .card {
+    #login {
+        display: flex;
+        justify-content: center;
+    }
+    .cardlogin {
         width: 100%;
         margin-right: 1em;
     }
@@ -109,10 +113,10 @@ input:focus {
     }
 }
 @media only screen and (max-width: 375px) {
-    .card {
-        width: 100%;
-        height: auto;
-        margin-right: 1em;
+    .cardlogin {
+        width: 20em;
+        padding-left: 2em;
+        margin-left: 2em;
     }
     .fab:before {
         font-size: 0.7em;

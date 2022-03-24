@@ -3,14 +3,14 @@
         <!-- Page Header Start -->
         <div class="page-header">
             <div class="container-contact">
-                <div  id="container-contact">
+
 
                     <div  id="shourtcut" class="col-12">
                         <a href="{{ url('/') }}">Home/</a>
                         <a href="#">Contact</a>
                     </div>
                 </div>
-            </div>
+         
         </div>
         <!-- Page Header End -->
 
@@ -60,7 +60,7 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Email Us</h3>
-                                <p>burgerking@example.com</p>
+                                <p>info@BS.com</p>
                             </div>
                         </div>
                     </div>

@@ -33,15 +33,15 @@
 
     text-align: center;
 }
-.profile_img img{
-    height:15em;
+.profile_img img {
+    height: 15em;
     border-radius: 1.5em;
-
 }
-.profile_img{
-position: absolute;
+.profile_img {
+    position: absolute;
     left: 65%;
-top:60%}
+    top: 60%;
+}
 input {
     color: rgb(210 89 161);
     padding: 0.5em;
@@ -50,7 +50,7 @@ input {
 .profile-head h6 {
     color: white;
 }
-.profile-form{
+.profile-form {
     margin: auto !important;
 }
 .profile-edit-btn {
@@ -60,7 +60,7 @@ input {
     padding: 2%;
     font-weight: 600;
     color: white;
-    background-color: rgb(210 89 161);;
+    background-color: rgb(210 89 161);
     cursor: pointer;
 }
 .proile-rating {
@@ -75,15 +75,17 @@ input {
 }
 .profile-head .nav-tabs {
     margin-bottom: 5%;
+    border-bottom: 0em;
 }
 .profile-head .nav-tabs .nav-link {
     font-weight: 600;
     border: none;
-    color: rgb(241, 161, 209); !important;
+    color: rgb(241, 161, 209) !important;
 }
+
 .profile-head .nav-tabs .nav-link.active {
     border: none;
-    border-bottom: 2px solid rgb(210 89 161); !important;
+    border-bottom: 2px solid rgb(210 89 161) !important;
 }
 .profile-work {
     padding: 14%;
@@ -112,20 +114,25 @@ input {
     color: white;
 }
 @media only screen and (max-width: 420px) {
+    #pC {
+        margin-left: 0;
+        margin-right: 0;
+    }
     .emp-profile {
         margin-left: 3em;
     }
     .profile-img img {
         margin-right: 3em;
-        width: 84%;
+        width: 7em;
 
         margin-bottom: 2em;
-}
-.cancelreserve{
-    width: 4em;
-    font-size: 0.4em;
-}
-#table{  width: 50%;
-    font-size:0.3em;}
-
+    }
+    .cancelreserve {
+        width: 4em;
+        font-size: 0.4em;
+    }
+    #table-profile {
+        width: 50% !important;
+        font-size: 0.7em !important;
+    }
 }

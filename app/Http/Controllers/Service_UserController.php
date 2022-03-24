@@ -35,7 +35,7 @@ class Service_UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request ,Service $service)
+    public function store(Request $request, Service $service)
     {
         if (Auth::check()) {
 
@@ -50,6 +50,7 @@ class Service_UserController extends Controller
 
                     $time = $reservations['pivot']->time;
                     $service_id = $reservations['pivot']->service_id;
+
 
                     if ($request->date == $date && $request->time == $time && $request->service_name == $service_id) {
                         // $error=true;
@@ -71,7 +72,7 @@ class Service_UserController extends Controller
                         'time' => $request->time,
                         'date' => $request->date,
                         'note' => $request->note,
-                       'service_name'=>$request->service_name,
+                        'service_name' => $request->service_name,
 
 
                     ]

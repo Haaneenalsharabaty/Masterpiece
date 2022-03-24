@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
-use App\Models\Service;
+use App\Http\Controllers\Controller;
+use App\Models\Contact;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class IndexController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +16,9 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $services=Service::all();
-        // dd($services);
-
-
-        return view('layouts.index',compact('services'));
+        $adminName = User::where('role', '=', 'admin')->get();
+        $contacts = Contact::all();
+        return view('admin.contact.index', compact('contacts', 'adminName'));
     }
 
     /**
@@ -27,43 +26,9 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function nails()
+    public function create()
     {
-
-      $services= DB::table('services')->where('category_id', '2')->get();
-
-
-
-        return view('layouts.gallery.nails',compact('services'));
-    }
-    public function hair()
-    {
-
-      $services= DB::table('services')->where('category_id', '1')->get();
-
-
-
-
-        return view('layouts.gallery.hair',compact('services'));
-    }
-    public function bridal()
-    {
-
-      $services= DB::table('services')->where('category_id', '3')->get();
-
-    
-
-        return view('layouts.gallery.bridal',compact('services'));
-    }
-    public function face()
-    {
-
-      $services= DB::table('services')->where('category_id', '4')->get();
-
-
-
-
-        return view('layouts.gallery.face',compact('services'));
+        //
     }
 
     /**
@@ -117,8 +82,14 @@ class IndexController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $contact = Contact::find($id);
+        $contact->delete();
+        $request->flash();
+        session()->flash('success', 'Your contact delete successfully.');
+
+
+        return redirect()->back()->with('contact delete successfully.');
     }
 }

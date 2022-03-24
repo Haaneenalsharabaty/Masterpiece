@@ -28,7 +28,7 @@
     <form  class="profile-form" method="post" action="{{ route('users.edit') }}">
         @csrf
 
-        <div class="row">
+        <div class="row" id="pC">
             <div class="col-md-2">
                 <div class="profile-img">
                     <img src={{asset ("img/bd702201a2b6d8960734f60f34a22754.jpg") }} alt="profile logo"/>
@@ -116,7 +116,7 @@
                     </div>
 
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <table id="table"   class="table table-striped">
+                        <table id="table-profile"   class="table table-striped">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -149,7 +149,7 @@ $i=0;
 
                                 <td> {{$service->pivot->date}}</td>
                                 <td> {{$service->pivot->time}}</td>
-                               
+
                                 <td>  {{ $service->service_name }}</td>
 
 
