@@ -69,11 +69,14 @@ input:focus {
 }
 
 @media only screen and (max-width: 425px) {
+    #loginlink {
+        font-size: 0.5em;
+    }
     #Register-container {
         margin-top: 2em;
     }
     .card2 {
-        width: 20em;
+        width: 16em;
         padding-left: 2em;
         margin-left: 2em;
     }

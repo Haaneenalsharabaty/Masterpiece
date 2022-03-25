@@ -37,8 +37,8 @@
                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                     <i style=" color: #d259a1!important;" class="fa fa-chart-pie fa-3x text-primary"></i>
                     <div class="ms-3">
-                        <p class="mb-2">Total Resrvationfa-spin</p>
-                        <h6 class="mb-0">5</h6>
+                        <p class="mb-2">Total Contact</p>
+                        <h6 class="mb-0">{{count($allcontact)}}</h6>
                     </div>
                 </div>
             </div>

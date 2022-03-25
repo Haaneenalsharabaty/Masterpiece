@@ -97,6 +97,9 @@ input:focus {
     .Home {
         height: 60em;
     }
+    #login {
+        margin-top: 2em;
+    }
 }
 
 @media only screen and (max-width: 426px) {
@@ -114,9 +117,9 @@ input:focus {
 }
 @media only screen and (max-width: 375px) {
     .cardlogin {
-        width: 20em;
+        width: 16em;
         padding-left: 2em;
-        margin-left: 2em;
+        margin: 0em;
     }
     .fab:before {
         font-size: 0.7em;
@@ -133,10 +136,10 @@ input:focus {
         font-size: 0.8em;
     }
     .links {
-        font-size: 1em;
+        font-size: 0.7em;
     }
     .links a {
-        font-size: 0.8em;
+        font-size: 0.6em;
         margin-top: 0.5em;
     }
 }

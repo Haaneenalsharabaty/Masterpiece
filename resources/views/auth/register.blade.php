@@ -143,7 +143,7 @@
       </form>
   </div>
   <div class="card-footer">
-      <div class="d-flex justify-content-center links">
+      <div class="d-flex justify-content-center links" id="loginlink">
           Already have an account?<a href="{{ url('/login') }}">Sign in</a>
       </div>
 

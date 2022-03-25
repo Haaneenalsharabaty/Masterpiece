@@ -14,7 +14,7 @@ class contactController extends Controller
      */
     public function index()
     {
-        $contacts=Contact::all();
+        $contacts = Contact::all();
 
         return view('layouts.contact', compact('contacts'));
     }
@@ -35,7 +35,7 @@ class contactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request ,Contact $contact)
+    public function store(Request $request, Contact $contact)
     {
 
         $request->validate([
@@ -47,7 +47,7 @@ class contactController extends Controller
         Contact::create($request->all());
 
         $request->flash();
-        session()->flash('success', 'Thank you for your message.<br>We\'ll contact you as soon as possible.');
+        session()->flash('success', 'Thank you for your message.<br>We\'ll contact you within 24 hours.');
         // return redirect()->back()->with(['message'=>'success']);
         return redirect()->back();
     }

@@ -59,7 +59,7 @@
                  />
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="pC">
 
             <div class="col-md-6">
                 <div class="tab-content profile-tab" id="myTabContent">
@@ -115,8 +115,10 @@
                                 </div>
                     </div>
 
+
+
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <table id="table-profile"   class="table table-striped">
+                        <table id="pt" class="table">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
@@ -172,6 +174,7 @@ $i=0;
 
                     </div>
                 </div>
+
             </div>
         </div>
 
